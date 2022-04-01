@@ -4,7 +4,6 @@ import 'package:halal_farm/core/constant/constant.dart';
 import 'package:halal_farm/core/constant/size_config.dart';
 import 'package:halal_farm/core/data/data.dart';
 import 'package:halal_farm/core/extensions/extension.dart';
-import 'package:halal_farm/core/widgets/decoration_widget.dart';
 import 'package:halal_farm/core/widgets/my_buttons.dart';
 import 'package:halal_farm/core/widgets/text_styles.dart';
 
@@ -54,7 +53,11 @@ class LanguageSelectionPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                ).onT(ontap: () {});
+                ).onT(
+                  ontap: () {
+                    print("Ont $__");
+                  },
+                );
               },
               itemCount: MyData.langes.length,
               separatorBuilder: (BuildContext context, int index) =>

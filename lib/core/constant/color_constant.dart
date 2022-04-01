@@ -11,4 +11,5 @@ class ColorConst {
   static Color pink = const Color(0xFF7719D6);
   static Color blueDark = const Color(0xFF120949);
   static Color dark = const Color(0xFF3E423F);
+  static Color red = const Color(0xFFE33B3B);
 }

@@ -10,12 +10,19 @@ class Constant {
   static String xSvg = 'assets/svg/x.svg';
   static String oSvg = 'assets/svg/o.svg';
   static String doneSvg = 'assets/svg/done.svg';
+  static String plusSvg = 'assets/svg/plus_circle.svg';
+  static String plusRedSvg = 'assets/svg/plus_circile_red.svg';
+  static String warning = 'assets/svg/plus_circile_red.svg';
   // PNG
   static String sheep = 'assets/images/sheep.png';
   static String cow = 'assets/images/cow.png';
   static String halalFarmWhiteLogo = 'assets/images/halal_farm_logo.png';
   static String halalFarmBlackLogo = 'assets/images/halal_farm_black_logo.png';
   static String buzoqcha = 'assets/images/buzoqcha.png';
+  static String horse = 'assets/images/horse.png';
+  static String sheepBig = 'assets/images/sheepBIg.png';
+  static String beda = 'assets/images/beda.png';
+  static String bugdoy = 'assets/images/bugdoy.png';
   //
   static Row IjtimoiyTarmoqlarda() {
     return Row(
