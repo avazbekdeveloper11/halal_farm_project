@@ -20,7 +20,7 @@ class warningDisease extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SvgPicture.asset(Constant.plusRedSvg),
+              SvgPicture.asset(Constant.warning),
               SizedBox(
                 width: getW(280),
                 child: Text(
@@ -38,6 +38,10 @@ class warningDisease extends StatelessWidget {
                   col: ColorConst.dark,
                   sz: 15,
                 ),
+              ).onT(
+                ontap: () {
+                  print("Dori sotib ollish");
+                },
               ),
             ),
             height: getH(46),
@@ -46,7 +50,7 @@ class warningDisease extends StatelessWidget {
               8,
               color: ColorConst.dark,
             ),
-          ).sp(v: 30),
+          ).op(t: 16, b: 24),
         ],
       ),
     );

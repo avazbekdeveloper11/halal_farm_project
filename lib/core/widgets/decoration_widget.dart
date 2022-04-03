@@ -17,6 +17,26 @@ class MyDeco {
     );
   }
 
+  static BoxDecoration radiusverImage(
+      {double t = 0, double b = 0, required String image}) {
+    return BoxDecoration(
+      image: DecorationImage(image: AssetImage(image), fit: BoxFit.cover),
+      borderRadius: BorderRadius.vertical(
+        top: Radius.circular(t),
+        bottom: Radius.circular(b),
+      ),
+    );
+  }
+
+  static BoxDecoration verticalR({double t = 0, double b = 0}) {
+    return BoxDecoration(
+      borderRadius: BorderRadius.vertical(
+        top: Radius.circular(t),
+        bottom: Radius.circular(b),
+      ),
+    );
+  }
+
   static BoxDecoration radiusAndColor(double r, {required Color color}) {
     return BoxDecoration(
       border: Border.all(color: color),

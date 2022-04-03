@@ -8,6 +8,7 @@ import 'package:halal_farm/screens/login_page/sms_password_page/sms_password_pag
 import 'package:halal_farm/screens/on_boarding_page/on_boarding_one.dart';
 import 'package:halal_farm/screens/on_boarding_page/on_boarding_there.dart';
 import 'package:halal_farm/screens/on_boarding_page/on_boarding_two.dart';
+import 'package:halal_farm/screens/singel_page/singel_page.dart';
 import 'package:halal_farm/screens/splash_screen/splash_screen.dart';
 import 'package:halal_farm/screens/tarif_page.dart/tarif_page.dart';
 
@@ -40,6 +41,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const TarifPage());
       case "/home_page":
         return MaterialPageRoute(builder: (_) => const HomePage());
+      case "/singel_page":
+        return MaterialPageRoute(builder: (_) => const SingelPage());
       default:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
     }

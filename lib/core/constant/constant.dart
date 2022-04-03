@@ -12,7 +12,9 @@ class Constant {
   static String doneSvg = 'assets/svg/done.svg';
   static String plusSvg = 'assets/svg/plus_circle.svg';
   static String plusRedSvg = 'assets/svg/plus_circile_red.svg';
-  static String warning = 'assets/svg/plus_circile_red.svg';
+  static String location = 'assets/svg/location.svg';
+  static String warning = 'assets/svg/warning.svg';
+  static String live_video = 'assets/svg/live_video.svg';
   // PNG
   static String sheep = 'assets/images/sheep.png';
   static String cow = 'assets/images/cow.png';
@@ -23,6 +25,7 @@ class Constant {
   static String sheepBig = 'assets/images/sheepBIg.png';
   static String beda = 'assets/images/beda.png';
   static String bugdoy = 'assets/images/bugdoy.png';
+  static String farm = 'assets/images/farm.png';
   //
   static Row IjtimoiyTarmoqlarda() {
     return Row(

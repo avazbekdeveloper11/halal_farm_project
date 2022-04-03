@@ -1,3 +1,5 @@
+import 'package:halal_farm/core/constant/constant.dart';
+
 class MyData {
   static List langes = [
     {
@@ -51,6 +53,36 @@ class MyData {
         "Istalgan paytda hayvonni onlayn sotuvga qo’yish",
         "Qo’shimcha xizmatlar"
       ],
+    },
+  ];
+  static List<Map> animalData = [
+    {
+      'title': "1. Denov oti (№254)",
+      'animalImage': Constant.horse,
+      'diease': "",
+      'ripeningTime': "22-noyabr, 2022-yil",
+      'firstPercent': 52,
+      'foodNumber': 2,
+      'percentMeture': 50,
+      'imageFirst': Constant.beda,
+      'imageSecond': Constant.bugdoy,
+      'firstFoodName': "Beda",
+      'secondFoodName': 'Bug’doy',
+      'secondPersent': 8,
+    },
+    {
+      'title': "2. Hisori qo’y (№365)",
+      'animalImage': Constant.sheepBig,
+      'diease': "Qo’ylar orasida oq mushak kasalligi tarqayapti. ",
+      'ripeningTime': "22-Aprel, 2022-yil",
+      'firstPercent': 58,
+      'foodNumber': 2,
+      'percentMeture': 55,
+      'imageFirst': Constant.beda,
+      'imageSecond': Constant.bugdoy,
+      'firstFoodName': "Beda",
+      'secondFoodName': 'Bug’doy',
+      'secondPersent': 15,
     },
   ];
 }

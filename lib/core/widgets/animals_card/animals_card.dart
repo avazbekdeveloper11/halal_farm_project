@@ -11,31 +11,29 @@ import 'package:halal_farm/core/widgets/warning_dieaise/warning_dieaise.dart';
 
 class AnimalsCard extends StatelessWidget {
   String title;
-  String? disease;
-  String ripeningTime;
-  String foodTitle;
   String animalImage;
+  String ripeningTime;
+  int foodNumber;
   int percentMeture;
   String imageFirst;
+  String firstFoodName;
   String imageSecond;
-  String food;
-  String firstFood;
-  String secondFood;
+  String secondFoodName;
   int firstPercent;
   int secondPersent;
+  String? disease;
   AnimalsCard({
     Key? key,
     required this.title,
     required this.animalImage,
     this.disease = "",
-    required this.food,
     required this.ripeningTime,
-    required this.foodTitle,
+    required this.foodNumber,
     required this.percentMeture,
     required this.imageFirst,
     required this.imageSecond,
-    required this.firstFood,
-    required this.secondFood,
+    required this.firstFoodName,
+    required this.secondFoodName,
     required this.secondPersent,
     required this.firstPercent,
   }) : super(key: key);
@@ -59,7 +57,9 @@ class AnimalsCard extends StatelessWidget {
             height: getH(194),
             width: getW(319),
             decoration: MyDeco.radiusAndImage(8, image: animalImage),
-          ).op(b: 12, l: 20),
+          ).onT(ontap: () {
+            Navigator.pushNamed(context, "/singel_page");
+          }).op(b: 12, l: 20),
           // Warning chiqarish uchun
           warningDisease(text: disease).build(context),
           //
@@ -93,22 +93,22 @@ class AnimalsCard extends StatelessWidget {
                 "$percentMeture %",
                 style: TextStyles.BoldText500(sz: 18),
               ).op(r: 8),
-              percentTypePower(percent: (100 - percentMeture /*bu*/))
+              percentTypePower(percent: (100 - percentMeture.toInt() /*bu*/))
             ],
           ).op(b: 24, l: 20, r: 20, t: 8),
           Text(
-            food,
+            "Yemishlari ($foodNumber)",
             style: TextStyles.BoldText500(),
           ).op(l: 20),
           TrafficFoizi(
             image: imageFirst,
-            title: "$firstFood ($firstPercent%)",
-            percent: (100 - firstPercent /*bu*/),
+            title: "$firstFoodName ($firstPercent%)",
+            percent: (100 - firstPercent.toInt() /*bu*/),
           ),
           TrafficFoizi(
             image: imageSecond,
-            title: "$secondFood ($secondPersent%)",
-            percent: (100 - secondPersent /*bu*/),
+            title: "$secondFoodName ($secondPersent%)",
+            percent: (100 - secondPersent.toInt() /*bu*/),
           ),
         ],
       ).op(b: 27),
