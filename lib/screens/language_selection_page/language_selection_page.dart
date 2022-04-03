@@ -66,7 +66,7 @@ class LanguageSelectionPage extends StatelessWidget {
           ),
           const Spacer(),
           GrenButton(text: "Keyingisi").onT(ontap: () {
-            Navigator.pushNamed(context, "/on_board_one");
+            Navigator.pushNamed(context, "/home_page");
           }).op(b: 16),
         ],
       ).sp(h: 16),

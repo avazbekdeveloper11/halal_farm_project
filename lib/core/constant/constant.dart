@@ -15,6 +15,10 @@ class Constant {
   static String location = 'assets/svg/location.svg';
   static String warning = 'assets/svg/warning.svg';
   static String live_video = 'assets/svg/live_video.svg';
+  static String currentadress = 'assets/svg/current-location.svg';
+  static String cash = 'assets/svg/cash.svg';
+  static String birthday = 'assets/svg/birthday.svg';
+  static String calendar = 'assets/svg/calendar.svg';
   // PNG
   static String sheep = 'assets/images/sheep.png';
   static String cow = 'assets/images/cow.png';

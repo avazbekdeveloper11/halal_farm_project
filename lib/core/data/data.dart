@@ -1,6 +1,12 @@
 import 'package:halal_farm/core/constant/constant.dart';
 
 class MyData {
+  static List animalsProperty = [
+    "8 oylik",
+    "3 250 000 so’m",
+    "New Uzbekistan Farm",
+    "Xarid sanasi: 28.11.2021",
+  ];
   static List langes = [
     {
       "lang": "O’zbek tili",

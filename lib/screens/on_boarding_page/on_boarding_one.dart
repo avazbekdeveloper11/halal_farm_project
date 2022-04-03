@@ -35,7 +35,7 @@ class OnBoardingOne extends StatelessWidget {
           SvgPicture.asset("assets/svg/one.svg").op(t: 32),
           const Spacer(),
           GrenButton(text: "Keyingisi").onT(ontap: () {
-            Navigator.pushNamed(context, '/on_board_two');
+            Navigator.pushNamed(context, '/home_page');
           }).op(l: 16, r: 16, b: 16)
         ],
       ),

@@ -1,11 +1,16 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:halal_farm/screens/singel_page/components/app_bar_animal.dart';
+import 'package:halal_farm/core/widgets/warning_dieaise/warning_dieaise.dart';
+import 'package:halal_farm/screens/singel_page/components/history_tile.dart';
+import 'package:halal_farm/screens/singel_page/components/tags_animal.dart';
+import 'package:halal_farm/core/widgets/percent/persent_type_power.dart';
+import 'package:halal_farm/core/widgets/percent/trafic_widget.dart';
+import 'package:halal_farm/core/widgets/decoration_widget.dart';
 import 'package:halal_farm/core/constant/color_constant.dart';
-import 'package:halal_farm/core/constant/constant.dart';
 import 'package:halal_farm/core/constant/size_config.dart';
 import 'package:halal_farm/core/extensions/extension.dart';
 import 'package:halal_farm/core/widgets/text_styles.dart';
-import 'package:halal_farm/core/widgets/warning_dieaise/warning_dieaise.dart';
+import 'package:halal_farm/core/constant/constant.dart';
+import 'package:flutter/material.dart';
 
 class SingelPage extends StatelessWidget {
   const SingelPage({Key? key}) : super(key: key);
@@ -13,118 +18,111 @@ class SingelPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                height: getH(350),
-                width: getW(375),
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(Constant.horse),
-                    fit: BoxFit.cover,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const AppBarAnimal().op(b: 18),
+            warningDisease(
+              text: "Otlar orasida oq mushak kasalligi tarqayapti. ",
+            ),
+            const TagsAnimal().sp(h: 16),
+            SizedBox(
+              width: double.infinity,
+              child: Text(
+                "Yetilish ko’rsatkichi",
+                style: TextStyles.BoldText600(
+                  sz: getW(17),
+                ),
+              ).op(l: 16, t: 32, b: 20),
+            ),
+            Text(
+              "52%",
+              style: TextStyles.BoldText500(
+                col: ColorConst.dark,
+                sz: getW(20),
+              ),
+            ).op(b: 8),
+            percentTypePower(
+              percent: (30 * 2),
+              height: 200,
+              widht: 110,
+              radius: 24,
+            ),
+            Text(
+              "Taxminiy yetilish sanasi: 22-noyabr, 2022-yil",
+              style: TextStyles.BoldText500(
+                col: ColorConst.grey,
+                sz: getW(14),
+              ),
+            ).op(t: 16, b: 32),
+            SizedBox(
+              width: double.infinity,
+              child: Text(
+                "Yemishlari (2)",
+                style: TextStyles.BoldText500(
+                  sz: getW(20),
+                ),
+              ).op(l: 16, b: 18),
+            ),
+            TrafficFoizi(
+              image: Constant.beda,
+              title: "Beda (52%)",
+              percent: (100 - 52 /*bu*/),
+            ),
+            TrafficFoizi(
+              image: Constant.bugdoy,
+              title: "Bug'doy (30%)",
+              percent: (100 - 30 /*bu*/),
+            ),
+            historyTile(
+              food: "Yemishlar tarixi",
+              howMuch: 12,
+            ),
+            const Divider(height: 5, thickness: 1).sp(h: 16),
+            historyTile(
+              food: "Dorilar tarixi",
+              howMuch: 3,
+            ),
+            const Divider(height: 5, thickness: 1).sp(h: 16),
+            Container(
+              height: getH(56),
+              decoration: MyDeco.radius(12, color: ColorConst.frame),
+              child: Center(
+                child: Text(
+                  "Uyimga yetkazib berish",
+                  style: TextStyles.BoldText600(
+                    sz: getW(17),
                   ),
                 ),
-                alignment: const Alignment(-1, -1),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                      child: Row(children: [
-                        Icon(
-                          Icons.arrow_back_ios_new_rounded,
-                          size: getW(30),
-                          color: ColorConst.blue,
-                        ).onT(ontap: () {
-                          Navigator.pop(context);
-                        }),
-                        Text(
-                          'Ortga',
-                          style: TextStyles.BoldText600(
-                              sz: 17, col: ColorConst.blue),
-                        ).onT(ontap: () {
-                          Navigator.pop(context);
-                        }),
-                      ]),
-                    ),
-                    SizedBox(
-                      width: getW(225),
-                      child: Text(
-                        "Denov oti (№254)",
-                        textAlign: TextAlign.center,
-                        style: TextStyles.BoldText600(
-                          col: ColorConst.white,
-                          sz: 18,
-                        ),
-                      ),
-                    ),
-                    SvgPicture.asset(Constant.live_video)
-                  ],
-                ).op(t: 15, l: 8, r: 8),
-              ).op(b: 18),
-              warningDisease(
-                  text: "Otlar orasida oq mushak kasalligi tarqayapti. "),
-              SizedBox(
-                width: double.infinity,
-                child: Wrap(
-                  crossAxisAlignment: WrapCrossAlignment.start,
-                  runSpacing: 16,
-                  spacing: getW(16),
-                  children: [
-                    Container(
-                      color: ColorConst.frame,
-                      height: getH(47),
-                      width: getW(101),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SvgPicture.asset(Constant.warning),
-                          Text("8 oylik")
-                        ],
-                      ),
-                    ),
-                    Container(
-                      color: ColorConst.frame,
-                      width: getW(169),
-                      height: getH(47),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SvgPicture.asset(Constant.warning),
-                          Text("3 250 000 so’m")
-                        ],
-                      ),
-                    ),
-                    Container(
-                      color: ColorConst.frame,
-                      width: getW(211),
-                      height: getH(47),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SvgPicture.asset(Constant.warning),
-                          Text("New Uzbekistan Farm")
-                        ],
-                      ),
-                    ),
-                    Container(
-                      color: ColorConst.frame,
-                      width: getW(225),
-                      height: getH(47),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SvgPicture.asset(Constant.warning),
-                          Text("Xarid sanasi: 28.11.2021")
-                        ],
-                      ),
-                    ),
-                  ],
+              ),
+            ).op(l: 16, r: 16, t: 32, b: 4),
+            Text(
+              "Hayvoningizni tirik yoki so’yilgan holatda uyingizga eltib beramiz",
+              style: TextStyles.normalText400(
+                sz: 13,
+                col: ColorConst.grey,
+              ),
+            ).sp(h: 16),
+            Container(
+              height: getH(56),
+              decoration: MyDeco.radius(12, color: ColorConst.frame),
+              child: Center(
+                child: Text(
+                  "Sotuvga qo’yish",
+                  style: TextStyles.BoldText600(
+                    sz: getW(17),
+                  ),
                 ),
-              ).sp(h: 16)
-            ],
-          ),
+              ),
+            ).op(l: 16, r: 16, t: 16, b: 4),
+            Text(
+              "Hayvoningizni onlayn bozorda boshqalarga sotishingiz mumkin",
+              style: TextStyles.normalText400(
+                col: ColorConst.grey,
+                sz: 13,
+              ),
+            ).op(r: 16, l: 16, b: 24),
+          ],
         ),
       ),
     );

@@ -7,9 +7,14 @@ import 'package:halal_farm/core/widgets/decoration_widget.dart';
 class percentTypePower extends StatelessWidget {
   double height;
   double widht;
+  double radius;
   int percent;
   percentTypePower(
-      {Key? key, this.height = 100, this.widht = 74, required this.percent})
+      {Key? key,
+      this.height = 100,
+      this.widht = 74,
+      required this.percent,
+      this.radius = 12})
       : super(key: key);
 
   @override
@@ -18,12 +23,12 @@ class percentTypePower extends StatelessWidget {
       width: getW(widht),
       height: getH(height),
       decoration: MyDeco.radiusAndColor(
-        12,
+        radius,
         color: ColorConst.grey,
       ),
       child: Container(
         decoration: MyDeco.radius(
-          11,
+          radius - 1,
           color: percent > 80 ? ColorConst.red : ColorConst.greenBold,
         ),
       ).op(t: percent.toDouble()),
