@@ -19,6 +19,8 @@ class Constant {
   static String cash = 'assets/svg/cash.svg';
   static String birthday = 'assets/svg/birthday.svg';
   static String calendar = 'assets/svg/calendar.svg';
+  static String home = 'assets/svg/home.svg';
+  static String filter = 'assets/svg/filter.svg';
   // PNG
   static String sheep = 'assets/images/sheep.png';
   static String cow = 'assets/images/cow.png';
@@ -30,6 +32,7 @@ class Constant {
   static String beda = 'assets/images/beda.png';
   static String bugdoy = 'assets/images/bugdoy.png';
   static String farm = 'assets/images/farm.png';
+  static String dori = 'assets/images/dori_big.png';
   //
   static Row IjtimoiyTarmoqlarda() {
     return Row(

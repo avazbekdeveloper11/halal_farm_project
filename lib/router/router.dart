@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:halal_farm/screens/dori_history/dori_history.dart';
+import 'package:halal_farm/screens/foods_history/fods_histor_page.dart';
 import 'package:halal_farm/screens/home_page/home_page.dart';
 import 'package:halal_farm/screens/language_selection_page/language_selection_page.dart';
 import 'package:halal_farm/screens/login_page/login_page.dart';
@@ -8,9 +10,14 @@ import 'package:halal_farm/screens/login_page/sms_password_page/sms_password_pag
 import 'package:halal_farm/screens/on_boarding_page/on_boarding_one.dart';
 import 'package:halal_farm/screens/on_boarding_page/on_boarding_there.dart';
 import 'package:halal_farm/screens/on_boarding_page/on_boarding_two.dart';
+import 'package:halal_farm/screens/put_to_box/put_to_box.dart';
+import 'package:halal_farm/screens/sale_conform/sale_conform.dart';
+import 'package:halal_farm/screens/sale_page/sale_page.dart';
+import 'package:halal_farm/screens/singel_dori_page/singel_dori_page.dart';
 import 'package:halal_farm/screens/singel_page/singel_page.dart';
 import 'package:halal_farm/screens/splash_screen/splash_screen.dart';
 import 'package:halal_farm/screens/tarif_page.dart/tarif_page.dart';
+import 'package:halal_farm/screens/uyimga_yetkazish/uyimga_yetkazish.dart';
 
 class RouteGenerator {
   Route generateRoute(RouteSettings settings) {
@@ -43,6 +50,20 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const HomePage());
       case "/singel_page":
         return MaterialPageRoute(builder: (_) => const SingelPage());
+      case "/sale_page":
+        return MaterialPageRoute(builder: (_) => const SalePage());
+      case "/sale_conform_page":
+        return MaterialPageRoute(builder: (_) => const SaleConform());
+      case "/put_to_box":
+        return MaterialPageRoute(builder: (_) => const PutToBox());
+      case "/foods_history":
+        return MaterialPageRoute(builder: (_) => const FoodsHistory());
+      case "/dorilar_history":
+        return MaterialPageRoute(builder: (_) => const DorilarHistory());
+      case "/singel_dori_page":
+        return MaterialPageRoute(builder: (_) => const SingelDoriPage());
+      case "/uyimga_yetkazib_berish":
+        return MaterialPageRoute(builder: (_) => const UyimgaYetkazish());
       default:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
     }

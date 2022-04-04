@@ -28,7 +28,11 @@ class TrafficFoizi extends StatelessWidget {
         toAnimate: false,
         position: const BadgePosition(bottom: -10, end: 0),
         badgeColor: Colors.transparent,
-        badgeContent: SvgPicture.asset(Constant.plusRedSvg),
+        badgeContent: SvgPicture.asset(Constant.plusRedSvg).onT(
+          ontap: () {
+            Navigator.pushNamed(context, "/foods_history");
+          },
+        ),
         child: CircleAvatar(
           radius: 35,
           backgroundImage: AssetImage(image),

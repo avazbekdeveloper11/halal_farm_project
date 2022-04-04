@@ -95,7 +95,9 @@ class SingelPage extends StatelessWidget {
                   ),
                 ),
               ),
-            ).op(l: 16, r: 16, t: 32, b: 4),
+            ).onT(ontap: () {
+              Navigator.pushNamed(context, "/uyimga_yetkazib_berish");
+            }).op(l: 16, r: 16, t: 32, b: 4),
             Text(
               "Hayvoningizni tirik yoki so’yilgan holatda uyingizga eltib beramiz",
               style: TextStyles.normalText400(
@@ -112,6 +114,10 @@ class SingelPage extends StatelessWidget {
                   style: TextStyles.BoldText600(
                     sz: getW(17),
                   ),
+                ).onT(
+                  ontap: () {
+                    Navigator.pushNamed(context, '/sale_page');
+                  },
                 ),
               ),
             ).op(l: 16, r: 16, t: 16, b: 4),

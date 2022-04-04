@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:halal_farm/core/constant/constant.dart';
 import 'package:halal_farm/core/extensions/extension.dart';
-import 'package:halal_farm/core/widgets/app_bar.dart';
+import 'package:halal_farm/core/widgets/app_bars/app_bar.dart';
 import 'package:halal_farm/core/widgets/my_buttons.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -15,7 +15,8 @@ class SignUpPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              AppBars.appBarlogin(context,'Ro’yxatdan o’tish').op(t: 10, b: 24, l: 14),
+              AppBars.appBarlogin(context, 'Ro’yxatdan o’tish')
+                  .op(t: 10, b: 24, l: 14),
               TextFormField(
                 decoration: const InputDecoration(
                   labelText: "To’liq ism-familiyangiz",

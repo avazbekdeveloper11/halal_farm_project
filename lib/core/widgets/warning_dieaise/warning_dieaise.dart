@@ -38,10 +38,6 @@ class warningDisease extends StatelessWidget {
                   col: ColorConst.dark,
                   sz: 15,
                 ),
-              ).onT(
-                ontap: () {
-                  print("Dori sotib ollish");
-                },
               ),
             ),
             height: getH(46),
@@ -50,6 +46,10 @@ class warningDisease extends StatelessWidget {
               8,
               color: ColorConst.dark,
             ),
+          ).onT(
+            ontap: () {
+              Navigator.pushNamed(context, "/dorilar_history");
+            },
           ).op(t: 16, b: 24),
         ],
       ),
